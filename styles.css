@@ -1,0 +1,59 @@
+.assignment, .exp {
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    margin: 20px;
+}
+
+.assignments, .experiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cover::before {
+    color:white;
+}
+
+.cover {
+    background-color:black;
+    order: 2px;
+    position: relative; /*children can be positioned relatively to parent */
+    height: 150px;
+    width: 700px;
+}
+.cover::after {
+    color: black;
+} 
+
+.title {
+    color: white;
+    opacity: 1;
+    position: absolute;
+}
+
+.details {
+    opacity: 0;
+    color: black;
+    position: absolute;
+}
+
+
+
+
+/* when you hover over cover, apply this css to shown, which is a child of cover */
+.cover:hover .details {
+    opacity: 1;
+}
+
+.cover:hover .title {
+    opacity: 0;
+}
+
+.cover:hover {
+    background-color: white
+}
